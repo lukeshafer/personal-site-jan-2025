@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+}
+
+html {
+  --font-sans: system-ui;
+  --font-serif: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+
+  /*font-family: var(--font-serif);*/
+
+  background-image: url("images/bg.png");
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 99vh;
+  padding: 1px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkslateblue;
+  width: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: mediumslateblue;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  color: aliceblue;
+  padding-inline: 10vw;
+  padding-block: 5vw;
+  filter: drop-shadow(3px 3px darkslateblue);
+  font-size: 7vw;
+}
+
+p {
+  padding: 2vw;
+  margin-inline: 15vw;
+  font-size: 1.5rem;
+  background-color: darkslateblue;
+  color: aliceblue;
+}
+
+dvd-logo {
+  position: absolute;
+  inset: unset;
+  top: 0;
+  left: 0;
+  --size: 120px;
+  width: var(--size);
+  height: var(--size);
+  transform-origin: top left;
+  transform: translateX(var(--x, 0px)) translateY(var(--y, 0px));
+  background: hsla(0, 0%, 100%, 0.2);
+  border: 2px solid hsla(0, 0%, 100%, 0.2);
+  mix-blend-mode: luminosity;
+  z-index: -1;
+}
