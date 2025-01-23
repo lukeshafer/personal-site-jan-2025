@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+	src: string;
+}
+---
+
+<figure class="music">
+	<header>
+		<figcaption>{Astro.props.title}</figcaption>
+		<a href={Astro.props.src}> (Download) </a>
+	</header>
+	<audio controls src={Astro.props.src}></audio>
+</figure>
+
+<style>
+	.music {
+		margin-inline: auto;
+		display: grid;
+		align-content: center;
+		padding: 1rem;
+    background-color: rebeccapurple;
+    border-radius: 2rem;
+	}
+
+	.music figcaption {
+		font-weight: 600;
+		font-size: 1.2rem;
+		padding-bottom: 4px;
+	}
+
+	.music header {
+    color: aliceblue;
+    justify-content: center;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+</style>

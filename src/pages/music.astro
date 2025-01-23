@@ -1,0 +1,39 @@
+---
+import Head from '../components/Head.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<Head>
+		<title>MUSIC + snailyLuke</title>
+	</Head>
+
+	<body>
+		<header class="page-header">
+			<h1>music by snailyluke</h1>
+			<Nav />
+		</header>
+
+		<ul class="music-list">
+			<MusicPlayer title="Joyful Ghosts" src="/music/joyful-ghosts.mp3" />
+			<MusicPlayer title="Birds" src="/music/birds.aac" />
+			<MusicPlayer title="Crealpis" src="/music/crealpis.aac" />
+			<MusicPlayer title="Floating" src="/music/floating.aac" />
+			<MusicPlayer title="Mini's Song" src="/music/minis-song.aac" />
+			<MusicPlayer title="Puzzle Cube Jam" src="/music/puzzle-cube-jam.aac" />
+			<MusicPlayer title="Refuge" src="/music/refuge.aac" />
+		</ul>
+		<style>
+			.music-list {
+				display: grid;
+				gap: 2rem;
+				max-width: 100rem;
+				margin-inline: auto;
+				outline: 1px solid red;
+				grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+			}
+		</style>
+	</body>
+</html>

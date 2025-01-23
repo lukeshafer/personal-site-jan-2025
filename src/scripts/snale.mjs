@@ -1,5 +1,6 @@
+// @ts-check
 customElements.define(
-  "dvd-logo",
+  "its-snale",
   class extends HTMLElement {
     vx = Math.random() * 20 + 55;
     //vx = this.MAX_X / 10
@@ -37,6 +38,10 @@ customElements.define(
       return this.#__y;
     }
 
+    get img() {
+      return this.querySelector("img");
+    }
+
     connectedCallback() {
       this.innerHTML = '<img src="/images/snale.png" width="100%" />';
       const counter = document.querySelector("corner-hit-counter");
@@ -46,6 +51,8 @@ customElements.define(
       });
 
       const margin = 2;
+
+      this.setupClickHandler();
 
       let prevT = 0;
       let hitting = false;
@@ -85,6 +92,14 @@ customElements.define(
       };
       step(prevT);
     }
+
+    setupClickHandler() {
+      this.draggable = true;
+      this.ondragstart = (event) => {
+        this.xdir = 0;
+        this.ydir = 0;
+      };
+    }
   },
 );
 
@@ -96,4 +111,3 @@ customElements.define(
 function clamp(min, target, max) {
   return Math.max(min, Math.min(target, max));
 }
-
