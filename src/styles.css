@@ -6,7 +6,7 @@ html {
   --font-sans: system-ui;
   --font-serif: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
 
-  /*font-family: var(--font-serif);*/
+  font-family: var(--font-sans);
 
   background-image: url("images/bg.png");
   background-attachment: fixed;
@@ -89,4 +89,41 @@ a {
 
 a:visited {
   color: palegoldenrod;
+}
+
+nav {
+  display: flex;
+  width: fit-content;
+  background-color: darkslateblue;
+  padding: 1rem 3rem;
+  gap: 3rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.music {
+  margin-inline: auto;
+  display: grid;
+  align-content: center;
+  padding: 1rem;
+  background-color: darkslateblue;
+  border-radius: 2rem;
+  filter: drop-shadow(4px 4px rgb(255 255 255 / 0.5)) drop-shadow(-4px -4px rgb(255 255 255 / 0.5));
+}
+
+.music figcaption {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom: 4px;
+  color: aliceblue;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.music figcaption a {
+  font-weight: 400;
+  font-size: 1rem;
 }

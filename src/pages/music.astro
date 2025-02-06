@@ -1,7 +1,7 @@
 ---
-import Head from '../components/Head.astro';
-import MusicPlayer from '../components/MusicPlayer.astro';
-import Nav from '../components/Nav.astro';
+import Head from './_Head.astro';
+import { MusicPlayer } from '../components/MusicPlayer';
+import { Nav } from '../components/Nav';
 ---
 
 <!doctype html>
@@ -31,7 +31,6 @@ import Nav from '../components/Nav.astro';
 				gap: 2rem;
 				max-width: 100rem;
 				margin-inline: auto;
-				outline: 1px solid red;
 				grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 			}
 		</style>

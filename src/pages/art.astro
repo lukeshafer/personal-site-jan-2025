@@ -1,0 +1,61 @@
+---
+import Head from './_Head.astro';
+import { Nav } from '../components/Nav';
+import { ArtPiece } from '../components/ArtPiece';
+import { For } from 'solid-js';
+
+const art: Array<[title: string, src: string]> = [
+	['Eye', 'eye.png'],
+	['Gloss', 'gloss.png'],
+	['Hand', 'hand.png'],
+	['Left', 'left.png'],
+	['Lonely', 'lonely-tree.png'],
+	['Moon', 'moon.png'],
+	['Pignite', 'pignite.png'],
+	['Preserve', 'preserve.png'],
+	['Ring', 'ring.png'],
+	['Self-Portrait', 'self-portait.png'],
+	['Skin', 'skin.png'],
+	['Socks', 'socks.png'],
+	['Wax', 'wax.png'],
+	['Worm', 'worm.png'],
+	['wourM!', 'wourm.png'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<Head>
+		<title>the art of a snailyLuke</title>
+	</Head>
+
+	<body>
+		<header class="page-header">
+			<h1>art!</h1>
+			<Nav />
+		</header>
+		<ul>
+			{
+				art.map(([title, src]) => (
+					<li>
+						<ArtPiece src={src} title={title} />
+					</li>
+				))
+			}
+		</ul>
+	</body>
+</html>
+
+<style>
+	ul {
+		display: grid;
+		gap: 2rem;
+		max-width: 100rem;
+		margin-inline: auto;
+		grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	}
+
+	li {
+		list-style: none;
+	}
+</style>

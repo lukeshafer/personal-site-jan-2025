@@ -12,7 +12,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "astro": "^5.1.8"
+    "@astrojs/solid-js": "^5.0.4",
+    "astro": "^5.1.8",
+    "solid-js": "^1.9.4"
   },
   "devDependencies": {
     "prettier": "^3.4.2",

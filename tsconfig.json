@@ -3,6 +3,8 @@
     "moduleResolution": "nodenext",
     "module": "NodeNext",
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }
